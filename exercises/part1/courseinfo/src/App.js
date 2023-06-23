@@ -1,6 +1,11 @@
-const Header = (props) =>{
-  return <h1>{props.name}</h1>
+// se extrae la propiedad name de props directamente en la creación de la funcion
+const Header = ({name}) =>{
+  //alternativa, se extrae la propiedad name de props
+  //y se utiliza en la función como constante
+  //const {name} = props
+  return <h1>{name}</h1>
 }
+// forma corta>>   const Header = ({name}) => <h1>{name}</h1>
 
 const Part1 = (props) =>{
   return <p>
