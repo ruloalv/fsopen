@@ -25,20 +25,57 @@ const Total = (props) =>{
 }
 
 function App() {
+  //const course = 'Half Stack application development'
+  //const part1 = 'Fundamentals of React'
+  //const exercises1 = 10
+  //const part2 = 'Using props to pass data'
+  //const exercises2 = 7
+  //const part3 = 'State of a component'
+  //const exercises3 = 14
+
+  // const course = 'Half Stack application development'
+  // const part1 = {
+  //   name: 'Fundamentals of React',
+  //   exercises: 10
+  // }
+  // const part2 = {
+  //   name: 'Using props to pass data',
+  //   exercises: 7
+  // }
+  // const part3 = {
+  //   name: 'State of a component',
+  //   exercises: 14
+  // }
+
   const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7
+    },
+    {
+      name: 'State of a component',
+      exercises: 14
+    }
+  ]
+
+
   return (
     <div>
+      {/* <Header name={course} />
+      <Content text={part1.name} exercises={part1.exercises} />
+      <Content text={part2.name} exercises={part2.exercises} />
+      <Content text={part3.name} exercises={part3.exercises} />
+      <Total text='Number of exercises' total={part1.exercises + part2.exercises + part3.exercises} /> */}
       <Header name={course} />
-      <Content text={part1} exercises={exercises1} />
-      <Content text={part2} exercises={exercises2} />
-      <Content text={part3} exercises={exercises3} />
-      <Total text='Number of exercises' total={exercises1 + exercises2 + exercises3} />
+      <Content text={parts[0].name} exercises={parts[0].exercises} />
+      <Content text={parts[1].name} exercises={parts[1].exercises} />
+      <Content text={parts[2].name} exercises={parts[2].exercises} />
+      <Total text='Number of exercises' total={parts[0].exercises + parts[1].exercises + parts[2].exercises} />
     </div>
   );
 }
